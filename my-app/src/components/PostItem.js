@@ -3,10 +3,15 @@ import css from "./css/PostItem.module.css";
 
 
 function PostItem(props) {
+    console.log(props.savedPosts)
     return (
         props.savedPosts.map(post => {
-            // Extra task destructuring 
-            return <div className={css.SearchItem} >
+            const {title, name, image, description} = post
+            return <div className={css.SearchItem} key={title}>
+                <p>{title}</p>
+                <p>{name}</p>
+                <img src={image} alt="random"/>
+                <p>{description}</p>
             </div>
             }
         )
