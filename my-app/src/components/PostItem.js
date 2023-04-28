@@ -3,7 +3,6 @@ import css from "./css/PostItem.module.css";
 
 
 function PostItem(props) {
-    console.log(props.savedPosts)
     return (
         props.savedPosts.map(post => {
             const {title, name, image, description} = post
